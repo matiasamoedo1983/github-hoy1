@@ -1,0 +1,183 @@
+/*unidad de medida relativa REM*/
+/*1rem es = a 16px (en un html sin resetear la tipografia, sino cambia, osea REM toma el valor del HTML que por default es 16px) 
+
+ejemplo:
+
+h1{
+    font-size: 1rem ;
+}*/
+
+
+/*unidad de medida relativa EM -casi no se usa-*/
+/*em toma el tamaño del contenedor mas proximo */
+
+/* reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+
+body{
+    background-color: #ECEEF3 ;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*estilos de header*/
+header{
+    display: none;
+}
+
+
+/*estilos de main*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main h2{
+    text-align: center;
+    color: #182941;
+    margin: 1rem ;
+}
+
+main h2 span {
+    display: block;
+}
+
+main p{
+    text-align: center;
+}
+
+main .boton{
+    background-color: #51B0DF;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    box-shadow: 2px 2px black;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+}
+
+/*estilos de la section*/
+section{
+    display: none;
+}
+
+/*estilos de footer*/
+
+footer h4{
+    text-align: center;
+}
+
+/* media quieries*/
+
+@media screen and (min-width:600px){
+
+header{
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    
+}
+
+
+header nav ul li{
+    font-weight: bold;  
+   
+}
+
+header nav ul li :hover{
+background-color: blue;
+}
+
+/*generar los estilos nuevos del main*/
+
+main{
+  
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2  2fr) ;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr ;
+    grid-template-areas: 
+    "p img"
+    "h2 img"
+    "p-dos img"
+    "boton img";
+    justify-content: center;
+    justify-items: center;
+
+}
+
+main p{
+    grid-area: p;
+}
+
+main img{
+    grid-area: img;
+    width: 80%;
+}
+
+main h2{
+    grid-area: h2;
+    font-size: 1.7rem;
+}
+
+main .p-dos{
+    grid-area: p-dos;
+}
+
+main .boton{ 
+    grid-area: boton;
+}
+
+
+
+/*estilos de section*/
+
+section{
+    background-color: #BEE0F1;
+    display: block;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+section div img{
+    width: 20%;
+
+}
+section div p{
+    text-align: center;
+}
+
+/*estilos de footer*/
+
+footer{
+    margin-top: 1.3rem;
+}
+
+
+ }
+
+ 
